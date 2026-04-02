@@ -1,0 +1,8 @@
+.App {
+    height: 100vh;
+
+    &__main-page-content {
+        position: relative;
+        height: calc(100vh - 80px);
+    }
+}
