@@ -21,12 +21,12 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm(
-            "service_ohunvw9",
-            "template_n6apnho",
-            e.target,
-            "ZSA3ghVsoUeupNdW7"
-        )
+       emailjs.sendForm(
+    process.env.REACT_APP_SERVICE_ID,
+    process.env.REACT_APP_TEMPLATE_ID,
+    e.target,
+    process.env.REACT_APP_PUBLIC_KEY
+)
             .then(() => {
                 setStatus("success");
             })
