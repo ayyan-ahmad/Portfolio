@@ -24,7 +24,7 @@ const projectData = [
         id: 3,
         name: "Weather Checker",
         image: image3,
-        link: '',
+        link: 'https://weather-checker-2603.netlify.app/',
 
         filterId: 3
 

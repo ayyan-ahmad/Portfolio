@@ -29,14 +29,14 @@ const Skills = () => {
                             </h3>
                             <div className='skills__content__wrapper__innerContent__data'>
                                 {skill.data.map((item, innerIndex) => (
-                                    <AnimateKeyframes
+                                    <AnimateKeyframes key={innerIndex}
 
                                         play
                                         duration={1}
                                         keyframes={["opacity: 1", "opacity: 0"]}
                                         iterationCount="1"
                                     >
-                                        <div className='progressbar' key={innerIndex}>
+                                        <div className='progressbar'>
                                             <p>{item.skillName}</p>
                                             <Line
                                                 percent={parseInt(item.percentage)}
