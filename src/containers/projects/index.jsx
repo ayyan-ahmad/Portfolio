@@ -42,7 +42,7 @@ const projectData = [
         id: 5,
         name: "Notes-App",
         image: image4,
-        link: 'https://notes-app-2603.netlify.app',
+        link: 'https://ayyan-react-notes-app.netlify.app/',
         filterId: 3
     }
 
