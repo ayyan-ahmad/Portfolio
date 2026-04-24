@@ -4,6 +4,7 @@ import { BsInfoCircleFill } from 'react-icons/bs';
 import image1 from "../../helper/images/image1.png";
 import image2 from "../../helper/images/image2.png";
 import image3 from "../../helper/images/image3.png";
+import image4 from "../../helper/images/image4.png";
 import './style.scss';
 import { useState } from 'react';
 
@@ -37,7 +38,13 @@ const projectData = [
         filterId: 3
     },
 
-
+    {
+        id: 5,
+        name: "Notes-App",
+        image: image4,
+        link: 'https://notes-app-2603.netlify.app',
+        filterId: 3
+    }
 
 ]
 const filterProjectsData = [
