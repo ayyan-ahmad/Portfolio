@@ -5,6 +5,7 @@ import image1 from "../../helper/images/image1.png";
 import image2 from "../../helper/images/image2.png";
 import image3 from "../../helper/images/image3.png";
 import image4 from "../../helper/images/image4.png";
+import image5 from "../../helper/images/image5.png";
 import './style.scss';
 import { useState } from 'react';
 
@@ -43,6 +44,13 @@ const projectData = [
         name: "Notes-App",
         image: image4,
         link: 'https://ayyan-react-notes-app.netlify.app/',
+        filterId: 3
+    },
+    {
+        id: 6,
+        name: "Gallery App",
+        image: image5,
+        link: 'https://ayyan-gallery-project.netlify.app/',
         filterId: 3
     }
 
