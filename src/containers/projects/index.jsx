@@ -6,6 +6,7 @@ import image2 from "../../helper/images/image2.png";
 import image3 from "../../helper/images/image3.png";
 import image4 from "../../helper/images/image4.png";
 import image5 from "../../helper/images/image5.png";
+import image6 from "../../helper/images/image6.png";
 import './style.scss';
 import { useState } from 'react';
 
@@ -52,7 +53,16 @@ const projectData = [
         image: image5,
         link: 'https://ayyan-gallery-project.netlify.app/',
         filterId: 3
+    },
+    {
+        id: 7,
+        name: "JobFit AI",
+        image: image6,
+        link: 'https://job-fit-ai-plum.vercel.app/',
+        filterId: 2
+
     }
+
 
 ]
 const filterProjectsData = [
