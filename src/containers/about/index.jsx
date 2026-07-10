@@ -3,9 +3,7 @@ import PageHeaderContent from '../../components/pageHeader';
 
 import { Animate } from 'react-simple-animate';
 import { useInView } from 'react-intersection-observer';
-import { FaBrain, FaGraduationCap, FaUserAlt } from "react-icons/fa";
-import { BsStars } from "react-icons/bs";
-
+import { FaUserAlt } from "react-icons/fa";
 const About = () => {
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
