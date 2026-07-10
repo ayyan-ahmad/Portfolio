@@ -4,6 +4,7 @@ import { FaBriefcase } from 'react-icons/fa';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { Animate } from 'react-simple-animate';
 import { useInView } from 'react-intersection-observer';
+import { GravityStarsBackground } from '../../components/animate-ui/components/backgrounds/gravity-stars';
 import image1 from "../../helper/images/image1.png";
 import image2 from "../../helper/images/image2.png";
 import image3 from "../../helper/images/image3.png";
@@ -90,13 +91,19 @@ const Projects = () => {
     const filteredItems = filteredvalue === 1 ? projectData : projectData.filter((item) => item.filterId === filteredvalue);
 
     return (
-        <section id="projects" ref={ref} className='min-h-screen flex flex-col py-[20px] px-[20px] md:px-[60px] lg:px-[100px] bg-[#151515]'>
-            <PageHeaderContent
-                headerText="Projects"
-                icon={<FaBriefcase size={40} />}
-            />
-            <div className='p-[20px] w-full'>
-                <ul className='flex justify-start p-[10px] rounded-[25px] border border-dashed border-theme-main w-max'>
+        <section id="projects" ref={ref} className='min-h-screen flex flex-col py-[20px] px-[20px] md:px-[60px] lg:px-[100px] bg-[#151515] relative overflow-hidden'>
+            {/* Gravity Stars Background */}
+            <div className="absolute inset-0 z-0">
+                <GravityStarsBackground className="w-full h-full opacity-60" />
+            </div>
+
+            <div className="relative z-10 w-full flex flex-col flex-1">
+                <PageHeaderContent
+                    headerText="Projects"
+                    icon={<FaBriefcase size={40} />}
+                />
+                <div className='p-[20px] w-full'>
+                    <ul className='flex justify-start p-[10px] rounded-[25px] border border-dashed border-theme-main w-max'>
                     {filterProjectsData.map((item) => (
                         <li
                             onClick={() => { handleFilter(item.filterId) }}
@@ -118,7 +125,7 @@ const Projects = () => {
                             start={{ transform: "perspective(1000px) rotateX(20deg) translateY(80px) scale(0.9)", opacity: 0 }}
                             end={{ transform: "perspective(1000px) rotateX(0deg) translateY(0px) scale(1)", opacity: 1 }}
                         >
-                            <div className='flex flex-col bg-[#1e1e24] border border-white/5 rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_10px_30px_rgba(255,221,64,0.1)] transition-all duration-500 hover:-translate-y-2 group h-full'>
+                            <div className='flex flex-col bg-[#1e1e24]/80 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_10px_30px_rgba(255,221,64,0.1)] transition-all duration-500 hover:-translate-y-2 group h-full'>
 
                                 {/* Image Section */}
                                 <div className='h-[220px] w-full overflow-hidden relative border-b border-white/10'>
@@ -167,6 +174,7 @@ const Projects = () => {
                         </Animate>
                     ))}
                 </div>
+            </div>
             </div>
         </section>
     );

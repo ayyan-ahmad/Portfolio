@@ -4,29 +4,36 @@ import PageHeaderContent from '../../components/pageHeader';
 import { Animate } from 'react-simple-animate';
 import { useInView } from 'react-intersection-observer';
 import { FaUserAlt } from "react-icons/fa";
+import { GravityStarsBackground } from '../../components/animate-ui/components/backgrounds/gravity-stars';
 const About = () => {
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
     return (
-        <section id="about" ref={ref} className='min-h-screen flex flex-col py-[20px] px-[20px] md:px-[60px] lg:px-[100px] bg-[#151515]'>
-            <PageHeaderContent
-                headerText="About Me"
-                icon={<FaUserAlt size={40} />}
-            />
+        <section id="about" ref={ref} className='min-h-screen flex flex-col py-[20px] px-[20px] md:px-[60px] lg:px-[100px] bg-[#151515] relative overflow-hidden'>
+            {/* Gravity Stars Background */}
+            <div className="absolute inset-0 z-0">
+                <GravityStarsBackground className="w-full h-full opacity-60" />
+            </div>
 
-            <div className='w-full mt-[30px] pb-[50px]'>
-                <Animate
-                    play={inView}
-                    duration={0.8}
-                    delay={0.1}
-                    easeType="cubic-bezier(0.175, 0.885, 0.32, 1.275)"
-                    start={{ transform: "translateY(50px)", opacity: 0 }}
-                    end={{ transform: "translateY(0px)", opacity: 1 }}
-                >
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-[25px] w-full">
+            <div className="relative z-10 w-full flex flex-col flex-1">
+                <PageHeaderContent
+                    headerText="About Me"
+                    icon={<FaUserAlt size={40} />}
+                />
+
+                <div className='w-full mt-[30px] pb-[50px]'>
+                    <Animate
+                        play={inView}
+                        duration={0.8}
+                        delay={0.1}
+                        easeType="cubic-bezier(0.175, 0.885, 0.32, 1.275)"
+                        start={{ transform: "translateY(50px)", opacity: 0 }}
+                        end={{ transform: "translateY(0px)", opacity: 1 }}
+                    >
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-[25px] w-full">
 
                         {/* 1. Intro Card (Spans 2 columns) */}
-                        <div className="md:col-span-2 bg-[#1e1e24] p-[30px] md:p-[40px] rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden group hover:border-theme-main/30 transition-all duration-500">
+                        <div className="md:col-span-2 bg-[#1e1e24]/80 backdrop-blur-sm p-[30px] md:p-[40px] rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden group hover:border-theme-main/30 transition-all duration-500">
                             <div className="absolute top-[-50px] right-[-50px] w-[150px] h-[150px] bg-theme-main/10 rounded-full blur-[80px] pointer-events-none group-hover:bg-theme-main/20 transition-all duration-500"></div>
 
                             <div className="flex items-center gap-[15px] mb-[20px]">
@@ -40,7 +47,7 @@ const About = () => {
                         </div>
 
                         {/* 2. Personal Info Card */}
-                        <div className="md:col-span-1 bg-[#1e1e24] p-[30px] md:p-[40px] rounded-3xl border border-white/5 shadow-2xl hover:border-theme-main/30 transition-all duration-500">
+                        <div className="md:col-span-1 bg-[#1e1e24]/80 backdrop-blur-sm p-[30px] md:p-[40px] rounded-3xl border border-white/5 shadow-2xl hover:border-theme-main/30 transition-all duration-500">
                             <div className="flex items-center gap-[15px] mb-[20px]">
                                 <h3 className='text-[2.2rem] font-bold text-white'>Profile</h3>
                             </div>
@@ -62,7 +69,7 @@ const About = () => {
                         </div>
 
                         {/* 3. DSA Card */}
-                        <div className="md:col-span-1 bg-[#1e1e24] p-[30px] md:p-[40px] rounded-3xl border border-white/5 shadow-2xl hover:border-theme-main/30 transition-all duration-500">
+                        <div className="md:col-span-1 bg-[#1e1e24]/80 backdrop-blur-sm p-[30px] md:p-[40px] rounded-3xl border border-white/5 shadow-2xl hover:border-theme-main/30 transition-all duration-500">
                             <div className="flex items-center gap-[15px] mb-[20px]">
                                 <h3 className='text-[2.2rem] font-bold text-white'>Problem Solving</h3>
                             </div>
@@ -72,7 +79,7 @@ const About = () => {
                         </div>
 
                         {/* 4. MERN & AI Card (Spans 2 columns) */}
-                        <div className="md:col-span-2 bg-[#1e1e24] p-[30px] md:p-[40px] rounded-3xl border border-theme-main/30 shadow-[0_0_30px_rgba(255,221,64,0.05)] relative overflow-hidden group hover:border-theme-main/60 transition-all duration-500">
+                        <div className="md:col-span-2 bg-[#1e1e24]/80 backdrop-blur-sm p-[30px] md:p-[40px] rounded-3xl border border-theme-main/30 shadow-[0_0_30px_rgba(255,221,64,0.05)] relative overflow-hidden group hover:border-theme-main/60 transition-all duration-500">
                             {/* Glow */}
                             <div className="absolute bottom-[-50px] left-[-50px] w-[200px] h-[200px] bg-theme-main/10 rounded-full blur-[100px] pointer-events-none group-hover:bg-theme-main/20 transition-all duration-500"></div>
 
@@ -89,6 +96,7 @@ const About = () => {
 
                     </div>
                 </Animate>
+            </div>
             </div>
         </section>
     );

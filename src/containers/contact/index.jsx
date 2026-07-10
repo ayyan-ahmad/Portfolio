@@ -6,6 +6,7 @@ import { Animate } from "react-simple-animate";
 import { useInView } from 'react-intersection-observer';
 import emailjs from "emailjs-com";
 import { FaCheckCircle, FaExclamationCircle, FaSpinner } from "react-icons/fa";
+import { GravityStarsBackground } from '../../components/animate-ui/components/backgrounds/gravity-stars';
 
 const Contact = () => {
 
@@ -45,14 +46,19 @@ const Contact = () => {
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
     return (
-        <section id="contact" ref={ref} className="min-h-screen flex flex-col py-[20px] px-[20px] md:px-[60px] lg:px-[100px]">
+        <section id="contact" ref={ref} className="min-h-screen flex flex-col py-[20px] px-[20px] md:px-[60px] lg:px-[100px] relative overflow-hidden bg-[#151515]">
+            {/* Gravity Stars Background */}
+            <div className="absolute inset-0 z-0">
+                <GravityStarsBackground className="w-full h-full opacity-60" />
+            </div>
 
-            <PageHeaderContent
-                headerText="My Contact"
-                icon={<FaPaperPlane size={40} />}
-            />
+            <div className="relative z-10 w-full flex flex-col flex-1">
+                <PageHeaderContent
+                    headerText="My Contact"
+                    icon={<FaPaperPlane size={40} />}
+                />
 
-            <div className="p-[20px]">
+                <div className="p-[20px]">
 
                 <Animate
                     play={inView}
@@ -60,7 +66,7 @@ const Contact = () => {
                     start={{ transform: "translateY(50px)", opacity: 0 }}
                     end={{ transform: "translateY(0px)", opacity: 1 }}
                 >
-                    <div className="mt-[30px] flex flex-col lg:flex-row gap-[40px] bg-[#1e1e24] p-[30px] md:p-[50px] rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden">
+                    <div className="mt-[30px] flex flex-col lg:flex-row gap-[40px] bg-[#1e1e24]/80 backdrop-blur-sm p-[30px] md:p-[50px] rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden">
 
                         {/* Decorative Blur */}
                         <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-theme-main/10 rounded-full blur-[100px] pointer-events-none"></div>
@@ -149,6 +155,7 @@ const Contact = () => {
 
                     </div>
                 </Animate>
+            </div>
             </div>
         </section>
     );
