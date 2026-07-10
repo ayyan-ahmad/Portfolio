@@ -1,35 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@350&display=swap');
 
 :root {
-
-
-
     --yellow-theme-background-color: #1d1d1d;
     --yellow-theme-main-color: #ffdd40;
     --yellow-theme-sub-text-color: #ffffff;
     --yellow-theme-nav-background-color: #181818;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+html {
+    font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
-html {
-    font-size: 62.5%;
-    font-family: serif;
-
-
-
-}
-
 body {
-    background-color: var(--yellow-theme-background-color);
-    height: 100%;
+    @apply bg-theme-bg font-sans text-theme-sub-text;
+    overflow-x: hidden;
 }
 
 #root {
-    height: 100%;
+    /* removed h-full to fix double scrollbar */
+}
+
+@keyframes loadingBar {
+    0% { width: 0%; }
+    30% { width: 40%; }
+    60% { width: 60%; }
+    100% { width: 100%; }
 }

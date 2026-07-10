@@ -1,60 +1,57 @@
 import React from 'react';
 import PageHeaderContent from '../../components/pageHeader';
-import { BsInfoCircleFill } from 'react-icons/bs';
+import { FaLaptopCode } from 'react-icons/fa';
 import { skillsData } from './utils';
-import { Animate, AnimateKeyframes } from 'react-simple-animate';
+import { Animate } from 'react-simple-animate';
 import { Line } from 'rc-progress';
-import './style.scss';
+import { useInView } from 'react-intersection-observer';
 
 const Skills = () => {
+    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+
     return (
-        <section id="skills" className='skills'>
+        <section id="skills" ref={ref} className='min-h-screen flex flex-col py-[20px] px-[20px] md:px-[60px] lg:px-[100px]'>
             <PageHeaderContent
                 headerText="Skills"
-                icon={<BsInfoCircleFill size={40} />}
+                icon={<FaLaptopCode size={40} />}
             />
-            <div className='skills__content__wrapper'>
+            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[20px] p-[20px] w-full'>
                 {skillsData.map((skill, index) => (
-                    <div key={index} className='skills__content__wrapper__innerContent'>
+                    <Animate
+                        key={index}
+                        play={inView}
+                        duration={0.6}
+                        delay={index * 0.15}
+                        start={{ transform: "translateY(50px)", opacity: 0 }}
+                        end={{ transform: "translateY(0px)", opacity: 1 }}
+                        render={({ style }) => (
+                            <div style={style} className="h-full w-full">
+                                <div className='w-full h-full bg-[#1e1e24] p-[20px] md:p-[25px] rounded-2xl border border-white/5 shadow-lg hover:shadow-[0_10px_30px_rgba(255,221,64,0.15)] transition-all duration-500 hover:-translate-y-2'>
 
-                        <Animate
-                            play
-                            duration={1}
-                            delay={0.5}
-                            start={{ transform: "translateX(-200px)", opacity: 0 }}
-                            end={{ transform: "translateX(0px)", opacity: 1 }}
-                        >
-                            <h3 className='skills__content__wrapper__innerContent__header-text'>
-                                {skill.label}
-                            </h3>
-                            <div className='skills__content__wrapper__innerContent__data'>
-                                {skill.data.map((item, innerIndex) => (
-                                    <AnimateKeyframes key={innerIndex}
+                                <h3 className='inline-block text-[2rem] md:text-[2.2rem] font-bold text-theme-main mb-[20px] tracking-[1px] relative pb-[8px] after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-theme-main after:rounded-[10px]'>
+                                    {skill.label}
+                                </h3>
+                                <div className='w-full'>
+                                    {skill.data.map((item, innerIndex) => (
+                                            <div key={innerIndex} className='mb-[20px]'>
+                                                <p className='text-[1.5rem] md:text-[1.6rem] text-theme-sub-text mb-[5px]'>{item.skillName}</p>
+                                                <Line
+                                                    percent={parseInt(item.percentage)}
+                                                    strokeColor="var(--yellow-theme-main-color)"
+                                                    strokeWidth="2"
+                                                    trailWidth="2"
+                                                    strokeLinecap="square"
+                                                >
+                                                </Line>
 
-                                        play
-                                        duration={1}
-                                        keyframes={["opacity: 1", "opacity: 0"]}
-                                        iterationCount="1"
-                                    >
-                                        <div className='progressbar'>
-                                            <p>{item.skillName}</p>
-                                            <Line
-                                                percent={parseInt(item.percentage)}
-                                                strokeColor="var(--yellow-theme-main-color)"
-                                                strokeWidth="2"
-                                                trailWidth="2"
-                                                strokeLinecap="square"
-                                            >
-                                            </Line>
+                                            </div>
+                                    ))}
+                                </div>
 
-                                        </div>
-                                    </AnimateKeyframes>
-                                ))}
+                                </div>
                             </div>
-
-                        </Animate>
-
-                    </div>
+                        )}
+                    />
                 ))}
             </div>
         </section>
