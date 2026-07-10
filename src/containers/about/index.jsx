@@ -12,7 +12,7 @@ const About = () => {
         <section id="about" ref={ref} className='min-h-screen flex flex-col py-[20px] px-[20px] md:px-[60px] lg:px-[100px] bg-[#151515] relative overflow-hidden'>
             {/* Gravity Stars Background */}
             <div className="absolute inset-0 z-0">
-                <GravityStarsBackground className="w-full h-full opacity-60" />
+                <GravityStarsBackground className="w-full h-full opacity-60" movementSpeed={1.2} />
             </div>
 
             <div className="relative z-10 w-full flex flex-col flex-1">

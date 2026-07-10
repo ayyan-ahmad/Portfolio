@@ -13,9 +13,8 @@ const Skills = () => {
     return (
         <section id="skills" ref={ref} className='min-h-screen flex flex-col py-[20px] px-[20px] md:px-[60px] lg:px-[100px] relative overflow-hidden bg-[#151515]'>
             
-            {/* Gravity Stars Background */}
             <div className="absolute inset-0 z-0">
-                <GravityStarsBackground className="w-full h-full opacity-60" />
+                <GravityStarsBackground className="w-full h-full opacity-60" movementSpeed={1.2} />
             </div>
 
             <div className="relative z-10 flex flex-col flex-1 w-full">
