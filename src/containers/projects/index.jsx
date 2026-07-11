@@ -17,7 +17,7 @@ const projectData = [
     {
         id: 1,
         name: "JobFit AI",
-        description: "An AI-powered job matching tool that analyzes resumes against job descriptions to provide compatibility scores and tailored feedback.",
+        description: "JobFit AI is an AI-powered MERN stack interview preparation platform that uses Gemini AI to analyze resumes & job descriptions, generate personalized 7-day roadmaps, AI mock interviews & ATS-optimized resumes. It features real-time interview feedback, a gamified leaderboard & EmailJS-powered personalized reminders to keep users engaged and on track.",
         techStack: ["React", "Tailwind", "Node.js", "Express", "MongoDB", "Gemini API"],
         image: image6,
         link: 'https://job-fit-ai-plum.vercel.app/',
@@ -27,7 +27,7 @@ const projectData = [
     {
         id: 2,
         name: "Staylio",
-        description: "Staylio is a full-stack peer-to-peer vacation rental platform inspired by Airbnb. It features secure authentication (Passport.js, JWT), dynamic listings with CRUD operations, booking management with date conflict checks, Cloudinary image uploads, and a responsive EJS + Bootstrap UI. Built using Node.js, Express, MongoDB, and deployed on Render",
+        description: "Staylio is a full-stack peer-to-peer vacation rental platform inspired by Airbnb. It features secure authentication (Passport.js, JWT), dynamic listings with CRUD operations, booking management with date conflict checks, Cloudinary image uploads, and a responsive EJS + Bootstrap UI. Built using Node.js, Express, MongoDB, and deployed on Render.",
         techStack: ["Bootstrap", "Node.js", "Express", "MongoDB"],
         image: image1,
         link: 'https://staylio-napw.onrender.com/listings',
@@ -151,7 +151,7 @@ const Projects = () => {
                                     {/* Content Section */}
                                     <div className="flex flex-col flex-1 p-[20px]">
                                         <h3 className="text-white text-[2.2rem] font-bold mb-[10px] group-hover:text-theme-main transition-colors duration-300">{item.name}</h3>
-                                        <p className="text-gray-400 text-[1.4rem] leading-[1.6] mb-[20px] line-clamp-3 flex-1">{item.description}</p>
+                                        <p className="text-gray-400 text-[1.4rem] leading-[1.6] mb-[20px]">{item.description}</p>
 
                                         {/* Tech Stack Tags */}
                                         <div className="flex flex-wrap gap-[8px] mb-[25px]">
