@@ -29,7 +29,7 @@ export const skillsData = [
             },
             {
                 skillName: "REACT",
-                percentage: "60%",
+                percentage: "85%",
             },
             {
                 skillName: "TAILWIND CSS",
@@ -51,19 +51,65 @@ export const skillsData = [
             {
                 skillName: "MONGODB",
                 percentage: "80%",
+            },
+            {
+                skillName: "REST APIS",
+                percentage: "80%",
+            },
+            {
+                skillName: "JWT AUTHENTICATION",
+                percentage: "75%",
             }
         ],
     },
     {
-        label: "TOOLS",
+        label: "TOOLS & PLATFORMS",
         data: [
             {
                 skillName: "GIT",
-                percentage: "75%",
+                percentage: "80%",
             },
             {
                 skillName: "GITHUB",
+                percentage: "85%",
+            },
+            {
+                skillName: "RENDER",
+                percentage: "80%",
+            },
+            {
+                skillName: "VERCEL",
+                percentage: "80%",
+            },
+            {
+                skillName: "NETLIFY",
+                percentage: "80%",
+            }
+        ]
+    },
+    {
+        label: "CORE CONCEPTS",
+        data: [
+            {
+                skillName: "DATA STRUCTURE & ALGORITHM",
                 percentage: "75%",
+            },
+            {
+                skillName: "OBJECT ORIENTED PROGRAMMING",
+                percentage: "80%",
+            }
+        ]
+    },
+    {
+        label: "AI SKILLS",
+        data: [
+            {
+                skillName: "GOOGLE GEMINI AI",
+                percentage: "80%",
+            },
+            {
+                skillName: "PROMPT ENGINEERING",
+                percentage: "85%",
             }
         ]
     }
