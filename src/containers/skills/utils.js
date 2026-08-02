@@ -1,14 +1,19 @@
+import React from 'react';
+import { FaJava, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaCode, FaRobot, FaDatabase, FaCss3Alt } from 'react-icons/fa';
+import { SiJavascript, SiHtml5, SiBootstrap, SiTailwindcss, SiExpress, SiMongodb, SiRender, SiVercel, SiNetlify, SiGooglegemini, SiJsonwebtokens } from 'react-icons/si';
+import { TbApi } from 'react-icons/tb';
+
 export const skillsData = [
     {
         label: "PROGRAMMING LANGUAGES",
         data: [
             {
                 skillName: "JAVA",
-                percentage: "75%",
+                icon: <FaJava color="#ED8B00" />,
             },
             {
                 skillName: "JAVASCRIPT",
-                percentage: "80%",
+                icon: <SiJavascript color="#F7DF1E" />,
             }
         ],
     },
@@ -17,23 +22,23 @@ export const skillsData = [
         data: [
             {
                 skillName: "HTML",
-                percentage: "90%",
+                icon: <SiHtml5 color="#E34F26" />,
             },
             {
                 skillName: "CSS",
-                percentage: "90%",
+                icon: <FaCss3Alt color="#1572B6" />,
             },
             {
                 skillName: "BOOTSTRAP",
-                percentage: "90%",
+                icon: <SiBootstrap color="#7952B3" />,
             },
             {
                 skillName: "REACT",
-                percentage: "85%",
+                icon: <FaReact color="#61DAFB" />,
             },
             {
                 skillName: "TAILWIND CSS",
-                percentage: "80%",
+                icon: <SiTailwindcss color="#06B6D4" />,
             },
         ],
     },
@@ -42,23 +47,23 @@ export const skillsData = [
         data: [
             {
                 skillName: "NODE JS",
-                percentage: "80%",
+                icon: <FaNodeJs color="#339933" />,
             },
             {
                 skillName: "EXPRESS",
-                percentage: "80%",
+                icon: <SiExpress color="#FFFFFF" />,
             },
             {
                 skillName: "MONGODB",
-                percentage: "80%",
+                icon: <SiMongodb color="#47A248" />,
             },
             {
                 skillName: "REST APIS",
-                percentage: "80%",
+                icon: <TbApi color="#007BFF" />,
             },
             {
                 skillName: "JWT AUTHENTICATION",
-                percentage: "75%",
+                icon: <SiJsonwebtokens color="#FF00FF" />,
             }
         ],
     },
@@ -67,23 +72,23 @@ export const skillsData = [
         data: [
             {
                 skillName: "GIT",
-                percentage: "80%",
+                icon: <FaGitAlt color="#F05032" />,
             },
             {
                 skillName: "GITHUB",
-                percentage: "85%",
+                icon: <FaGithub color="#FFFFFF" />,
             },
             {
                 skillName: "RENDER",
-                percentage: "80%",
+                icon: <SiRender color="#c3b4b471" />,
             },
             {
                 skillName: "VERCEL",
-                percentage: "80%",
+                icon: <SiVercel color="#FFFFFF" />,
             },
             {
                 skillName: "NETLIFY",
-                percentage: "80%",
+                icon: <SiNetlify color="#00C7B7" />,
             }
         ]
     },
@@ -92,11 +97,11 @@ export const skillsData = [
         data: [
             {
                 skillName: "DATA STRUCTURE & ALGORITHM",
-                percentage: "75%",
+                icon: <FaCode color="#00E5FF" />,
             },
             {
                 skillName: "OBJECT ORIENTED PROGRAMMING",
-                percentage: "80%",
+                icon: <FaDatabase color="#FF4B4B" />,
             }
         ]
     },
@@ -105,11 +110,11 @@ export const skillsData = [
         data: [
             {
                 skillName: "GOOGLE GEMINI AI",
-                percentage: "80%",
+                icon: <SiGooglegemini color="#1A73E8" />,
             },
             {
                 skillName: "PROMPT ENGINEERING",
-                percentage: "85%",
+                icon: <FaRobot color="#00FF41" />,
             }
         ]
     }
