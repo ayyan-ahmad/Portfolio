@@ -38,13 +38,13 @@ const Skills = () => {
                                     <h3 className='inline-block text-[2rem] md:text-[2.2rem] font-bold text-theme-main mb-[20px] tracking-[1px] relative pb-[8px] after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-theme-main after:rounded-[10px]'>
                                         {skill.label}
                                     </h3>
-                                    <div className='w-full flex flex-wrap gap-4 mt-6'>
+                                    <div className='w-full flex flex-wrap gap-3 md:gap-4 mt-6'>
                                         {skill.data.map((item, innerIndex) => (
-                                            <div key={innerIndex} className='flex items-center gap-4 px-6 py-3.5 bg-[#151515]/50 rounded-full border border-white/10 hover:border-theme-main/50 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,221,64,0.15)] transition-all duration-300 hover:-translate-y-2 group cursor-pointer'>
-                                                <div className='text-4xl md:text-5xl drop-shadow-lg group-hover:scale-125 group-hover:rotate-[10deg] transition-transform duration-300'>
+                                            <div key={innerIndex} className='flex items-center gap-2 md:gap-3 px-4 py-2 md:px-5 md:py-3 bg-[#151515]/50 rounded-full border border-white/10 hover:border-theme-main/50 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,221,64,0.15)] transition-all duration-300 hover:-translate-y-1 group cursor-pointer'>
+                                                <div className='text-3xl md:text-[2.2rem] drop-shadow-lg group-hover:scale-110 group-hover:rotate-[5deg] transition-transform duration-300'>
                                                     {item.icon}
                                                 </div>
-                                                <p className='text-[1.2rem] md:text-[1.35rem] font-semibold text-gray-200 group-hover:text-white transition-colors duration-300 tracking-wide'>
+                                                <p className='text-[1rem] md:text-[1.15rem] font-medium text-gray-200 group-hover:text-white transition-colors duration-300 tracking-wide'>
                                                     {item.skillName}
                                                 </p>
                                             </div>
