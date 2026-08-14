@@ -67,7 +67,7 @@ const Home = () => {
                             </button>
                             
                             <a 
-                                href="/Ayyan_Ahmad_Resume.pdf" 
+                                href={`${process.env.PUBLIC_URL}/Ayyan_Ahmad_Resume.pdf`} 
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className='flex items-center gap-[10px] px-[25px] py-[12px] sm:px-[30px] sm:py-[15px] text-[1.4rem] sm:text-[1.6rem] border-[2px] border-theme-main text-theme-main rounded-full font-bold hover:bg-theme-main hover:text-black hover:shadow-[0_0_20px_rgba(255,221,64,0.4)] transition-all duration-300 no-underline'

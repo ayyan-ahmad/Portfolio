@@ -12,6 +12,7 @@ import image4 from "../../helper/images/image4.png";
 import image5 from "../../helper/images/image5.png";
 import image6 from "../../helper/images/image6.png";
 import image7 from "../../helper/images/image7.png";
+import image8 from "../../helper/images/image8.png";
 
 const projectData = [
     {
@@ -24,6 +25,17 @@ const projectData = [
         github: 'https://github.com/ayyan-ahmad',
         filterId: 2
     },
+    {
+        id: 3,
+        name: "PlaeRise",
+        description: "A college placement management platform for Dev Bhoomi Uttarakhand University (DBUU) that helps students and coordinators manage job applications, attendance, announcements, company drives, and placement-related activities through a centralized digital system.",
+        techStack: ["React", "JavaScript", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
+        image: image8,
+        link: 'https://placerise.vercel.app/',
+        github: "#",
+        filterId: 2
+    },
+
     {
         id: 2,
         name: "Staylio",
