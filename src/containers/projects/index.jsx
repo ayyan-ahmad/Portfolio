@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PageHeaderContent from '../../components/pageHeader';
 import { FaBriefcase } from 'react-icons/fa';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import { Animate } from 'react-simple-animate';
 import { useInView } from 'react-intersection-observer';
 import { GravityStarsBackground } from '../../components/animate-ui/components/backgrounds/gravity-stars';
