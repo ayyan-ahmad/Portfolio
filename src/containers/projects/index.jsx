@@ -13,13 +13,14 @@ import image5 from "../../helper/images/image5.png";
 import image6 from "../../helper/images/image6.png";
 import image7 from "../../helper/images/image7.png";
 import image8 from "../../helper/images/image8.png";
+import image9 from "../../helper/images/image9.png";
 
 const projectData = [
     {
         id: 1,
         name: "JobFit AI",
         description: "JobFit AI is an AI-powered MERN stack interview preparation platform that uses Gemini AI to analyze resumes & job descriptions, generate personalized 7-day roadmaps, AI mock interviews & ATS-optimized resumes. It features real-time interview feedback, a gamified leaderboard & EmailJS-powered personalized reminders to keep users engaged and on track.",
-        techStack: ["React", "JavaScript", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Gemini AI"],
+        techStack: ["React", "JavaScript", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Gemini AI", "JWT"],
         image: image6,
         link: 'https://job-fit-ai-plum.vercel.app/',
         github: 'https://github.com/ayyan-ahmad',
@@ -32,7 +33,17 @@ const projectData = [
         techStack: ["React", "JavaScript", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
         image: image8,
         link: 'https://placerise.vercel.app/',
-        github: "#",
+        github: "https://github.com/ayyan-ahmad",
+        filterId: 2
+    },
+    {
+        id: 8,
+        name: "Legal Metrix AI",
+        description: "An AI-powered Legal Metrology compliance platform for inspection officers that scans product packaging, auto-extracts mandatory declarations using Gemini Vision, and validates them against legal compliance rules — with role-based dashboards, a submission-review workflow, and real-time analytics.",
+        techStack: ["React", "JavaScript", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Gemini API", "JWT"],
+        image: image9,
+        link: "https://legal-metrix-ai.vercel.app/",
+        github: "https://github.com/ayyan-ahmad",
         filterId: 2
     },
 
@@ -175,22 +186,14 @@ const Projects = () => {
                                         </div>
 
                                         {/* Buttons */}
-                                        <div className="flex gap-[15px] mt-auto">
-                                            <a
-                                                href={item.github}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex-1 flex justify-center items-center gap-[8px] py-[10px] rounded-lg border border-white/20 text-white text-[1.4rem] font-medium hover:bg-white/10 transition-colors"
-                                            >
-                                                <FaGithub size={18} /> GitHub
-                                            </a>
+                                        <div className="flex mt-auto">
                                             <a
                                                 href={item.link}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="flex-1 flex justify-center items-center gap-[8px] py-[10px] rounded-lg bg-theme-main text-black text-[1.4rem] font-bold hover:brightness-110 transition-all"
                                             >
-                                                <FaExternalLinkAlt size={16} /> Live Demo
+                                                <FaExternalLinkAlt size={16} /> View Website
                                             </a>
                                         </div>
                                     </div>
