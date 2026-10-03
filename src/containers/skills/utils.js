@@ -2,6 +2,7 @@ import React from 'react';
 import { FaJava, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaCode, FaRobot, FaDatabase, FaCss3Alt } from 'react-icons/fa';
 import { SiJavascript, SiHtml5, SiBootstrap, SiTailwindcss, SiExpress, SiMongodb, SiRender, SiVercel, SiNetlify, SiGooglegemini, SiJsonwebtokens, SiPostman } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
+import { HiSparkles } from 'react-icons/hi2';
 
 export const skillsData = [
     {
@@ -78,7 +79,7 @@ export const skillsData = [
                 skillName: "GITHUB",
                 icon: <FaGithub color="#FFFFFF" />,
             },
-             {
+            {
                 skillName: "POSTMAN",
                 icon: <SiPostman color="#FF6C37" />,
             },
@@ -119,6 +120,10 @@ export const skillsData = [
             {
                 skillName: "PROMPT ENGINEERING",
                 icon: <FaRobot color="#00FF41" />,
+            },
+            {
+                skillName: "GENERATIVE AI",
+                icon: <HiSparkles color="#8B5CF6" />,
             }
         ]
     }
